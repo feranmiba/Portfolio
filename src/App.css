@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* src/Navbar.css */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 60px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 30px;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.light {
+  transform: translateX(0);
+}
+
+.toggle-icon.dark {
+  transform: translateX(30px);
+}
