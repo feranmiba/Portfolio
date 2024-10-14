@@ -1,6 +1,7 @@
 import React from 'react'
 import { Portfolios } from '../utils/Data'
 import { Link } from 'react-router-dom'
+import WhatsAppLink from '../utils/WhatsappLink';
 
 function Portfolio() {
   return (
@@ -26,6 +27,7 @@ function Portfolio() {
     ))}
 </section>
       </section>
+      <WhatsAppLink />
     </div>
   )
 }

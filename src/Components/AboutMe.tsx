@@ -2,6 +2,7 @@ import React from 'react'
 import { techIcons, Experience } from '../utils/Data'
 import AnimatedSection from '../utils/AnimationSection'
 import { AnimatePresence, motion } from 'framer-motion'
+import WhatsAppLink from '../utils/WhatsappLink';
 
 function AboutMe() {
     const [openIndex, setOpenIndex] = React.useState<number | null>(null);
@@ -77,8 +78,7 @@ function AboutMe() {
         </section>
 
         </section>
-        
-       
+        <WhatsAppLink />
     </div>
   )
 }

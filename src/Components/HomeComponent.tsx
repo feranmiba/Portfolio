@@ -1,11 +1,11 @@
 import React from 'react'
 import Profile from '../Image/pic2-removebg-preview.png'
-import Automatictype from '../utils/AutomaticType'
 import AnimatedSection from '../utils/AnimationSection'
 import WordCycler from '../utils/WordCycler'
-import { FaGithub, FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import { SiX } from 'react-icons/si';
 import { motion } from 'framer-motion'
+import WhatsAppLink from '../utils/WhatsappLink';
 
 function HomeComponent() {
     const words = ['Frontend Developer', 'Mobile Developer', 'Backend Developer'];
@@ -82,7 +82,7 @@ function HomeComponent() {
             </section>
 
          
-         
+         <WhatsAppLink />
 
         </div>
   )
