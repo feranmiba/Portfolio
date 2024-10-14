@@ -39,13 +39,18 @@ export const Experience = [
         company: "Ullweb",
         time: "June 2024 - current",
         responsibilities: [
-            "Assisted in developing responsive web applications using HTML, CSS, and JavaScript.",
-            "Collaborated with designers to implement user-friendly interfaces and improve UX.",
-            "Participated in code reviews and contributed to team knowledge sharing.",
-            "Maintained and updated existing applications to enhance performance and usability.",
-            "Learned and utilized frameworks like React to build dynamic web components.",
-            "Engaged in team meetings to discuss project progress and propose enhancements."
+            "Developing and maintaining web and mobile applications using modern frameworks and technologies.",
+            "Collaborating with cross-functional teams to create user-friendly and efficient applications.",
+            "Creating and integrating RESTful APIs for seamless communication between frontend and backend services.",
+            "Designing and managing databases, ensuring data integrity and security, and optimizing query performance.",
+            "Conducting code reviews, implementing testing strategies, and ensuring high-quality code standards.",
+            "Ensuring applications are responsive and perform well across a variety of devices and screen sizes.",
+            "Using version control systems (like Git) for tracking changes and collaborating on code.",
+            "Analyzing and improving application performance, addressing bottlenecks and enhancing user experience.",
+            "Continuously researching and implementing emerging technologies and best practices in web and mobile development.",
+            "Identifying and fixing bugs, performance issues, and other technical challenges."
         ]
+        
     }
 ]
 
