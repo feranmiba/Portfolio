@@ -31,7 +31,7 @@ const AnimatedSection: React.FC<SectionProps> = ({ children, animationType }) =>
   }, []);
 
   const variants = {
-    hidden: { opacity: 0, y: 20, x: animationType === 'right' ? 20 : animationType === 'left' ? -20 : 0, scale: animationType === 'zoom' ? 0 : 1 },
+    hidden: { opacity: 0, y: 20, x: animationType === 'right' ? 20 : animationType === 'left' ? -20 : 0, scale: animationType === 'zoom' ? 0.5 : 1 },
     visible: animationType === 'fade' ? { opacity: 1 } : animationType === 'slide' ? { opacity: 1, y: 0 } : animationType === 'zoom' ? { scale: 1, opacity: 1 } : animationType === 'right' ? { x: 0, opacity: 1 } : { x: 0, opacity: 1 },
   };
 

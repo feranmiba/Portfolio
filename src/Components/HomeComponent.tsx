@@ -60,8 +60,9 @@ function HomeComponent() {
           <div className=' text-4xl font-medium'>
             <WordCycler words={words} duration={duration} />
           </div>
-                <p>A Result-Oriented Full stack  Web & Mobile Developer building and managing Websites and Web
-                Applications that leads to the success of the overall product</p>
+             
+<p className='font-semibold'>Results-Driven Full Stack Web & Mobile Developer</p>
+<p>I specialize in building and managing websites, web applications, and mobile applications that drive product success. With expertise in both backend and frontend development, I deliver robust solutions that enhance user experience and optimize performance across all platforms.</p>
 
                     <div className="flex space-x-4 dark:text-white mt-5">
       <a href="https://github.com/feranmiba" target="_blank" rel="noopener noreferrer">
