@@ -24,7 +24,7 @@ function HomeComponent() {
           },
         },
         right: {
-          x: -50, // Move to the right (in pixels)
+          x: -30, // Move to the right (in pixels)
           transition: {
             type: 'spring',
             stiffness: 10,
@@ -38,15 +38,14 @@ function HomeComponent() {
 
 
   return (
-    <div>
 
-        <div className=' dark:bg-[#252025] dark:text-white'>
+        <div className=' dark:bg-[#252025] dark:text-white h-[110vh]'>
             
-            <section className='flex justify-center px-32 py-5 gap-10'>
+            <section className='flex justify-center px-32  gap-10'>
                 <AnimatedSection animationType='left'>
             <motion.div      variants={animationVariants}
-        initial="left"
-        animate={['left', 'right']} >
+            initial="left"
+            animate={['left', 'right']} >
             <img src={Profile} className='object-contain ' />  
             </motion.div>
             </AnimatedSection>
@@ -83,9 +82,9 @@ function HomeComponent() {
             </section>
 
          
+         
 
         </div>
-    </div>
   )
 }
 

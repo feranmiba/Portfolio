@@ -8,6 +8,7 @@ function Navbar() {
   const toggleDarkMode = () => {
     setDarkMode((prev) => !prev);
     document.documentElement.classList.toggle('dark', !darkMode);
+    document.body.classList.toggle('dark');
   };
 
   const handleScroll = () => {

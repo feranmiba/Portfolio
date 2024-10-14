@@ -12,7 +12,7 @@ function AboutMe() {
 
 
   return (
-    <div className='dark:bg-[#252025] dark:text-white'>
+    <div className='dark:bg-[#252025] dark:text-white h-full'>
 
         <section className='text-start space-y-5 px-24 py-10'>
         <h1 className='font-bold text-xl'> About Me</h1>  
