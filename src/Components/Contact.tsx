@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaPhone, FaWhatsapp } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { SiX } from 'react-icons/si';
 
@@ -8,6 +8,10 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [status, setStatus] = useState('');
+
+  const phoneNumber = '+2347019040834'; // Your phone number
+  const messages = 'Hello, I would like to know more!';
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(messages)}`;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -73,6 +77,12 @@ function Contact() {
                   @emmanuel_amiola
                 </p>
               </a>
+            </div>
+            <div>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex gap-2">
+            <FaWhatsapp className="text-gray-700 hover:text-blue-400 dark:text-white" size={20} />
+            <p>Let's Chat</p>
+        </a>
             </div>
           </div>
         </div>
