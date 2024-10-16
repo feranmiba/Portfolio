@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaGithub, FaLinkedin, FaPhone, FaWhatsapp } from 'react-icons/fa';
-import { SiGmail } from 'react-icons/si';
-import { SiX } from 'react-icons/si';
+import { SiGmail, SiX } from 'react-icons/si';
 
 function Contact() {
+
+  
+  const contactRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    // Scroll to the contact section when the component mounts
+    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -16,7 +25,7 @@ function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const response = await fetch('https://formspree.io/f/xpwzzopy', { 
+    const response = await fetch('https://formspree.io/f/xpwzzopy', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -36,58 +45,52 @@ function Contact() {
   };
 
   return (
-    <div className='py-10 mt-8 px-24'>
-      <h1>Let's talk 😉</h1>
-      <form className='bg-white dark:bg-[#1b1b1bee] shadow-2xl flex rounded-md mt-10' onSubmit={handleSubmit}>
-        <div className='bg-[#fdf4f4] dark:bg-[#302f2fee] py-10 px-10 rounded-l-md'>
-          <h1 className='font-bold'>Connect with me</h1>
+    <div className='py-10 mt-8 px-5 lg:px-24' ref={contactRef}>
+      <h1 className='text-center text-2xl font-bold'>Let's talk 😉</h1>
+      <form className='bg-white dark:bg-[#1b1b1bee] shadow-2xl flex flex-col md:flex-row rounded-md mt-10' onSubmit={handleSubmit}>
+        <div className='bg-[#fdf4f4] dark:bg-[#302f2fee] py-10 px-5 md:px-10 rounded-md w-full md:w-1/3'>
+          <h2 className='font-bold text-lg'>Connect with me</h2>
           <div className='space-y-5 mt-5'>
             <div>
-              <a href='mailto:amiolademilade@gmail.com' className='flex gap-2'>
+              <a href='mailto:amiolademilade@gmail.com' className='flex gap-2 items-center'>
                 <SiGmail className='self-center' />
                 <p>amiolademilade@gmail.com</p>
               </a>
             </div>
             <div>
-              <a href='tel:07019040834' className='flex gap-2'>
+              <a href='tel:07019040834' className='flex gap-2 items-center'>
                 <FaPhone className='rotate-90 self-center' />
                 <p>+234 70 1904 0834</p>
               </a>
             </div>
             <div>
-              <a href="https://github.com/feranmiba" target='_blank' rel="noopener noreferrer">
-                <p className='flex gap-2'>
-                  <FaGithub className="text-gray-700 hover:text-black dark:text-white" size={20} />
-                  @feranmiba
-                </p>
+              <a href="https://github.com/feranmiba" target='_blank' rel="noopener noreferrer" className='flex gap-2 items-center'>
+                <FaGithub className="text-gray-700 hover:text-black dark:text-white" size={20} />
+                <p>@feranmiba</p>
               </a>
             </div>
             <div>
-              <a href="https://www.linkedin.com/in/amiola-demilade-5a46801a8/" target="_blank" rel="noopener noreferrer">
-                <p className='flex gap-2'>
-                  <FaLinkedin className="text-gray-700 hover:text-blue-700 dark:text-white" size={20} />
-                  Amiola Demilade
-                </p>
+              <a href="https://www.linkedin.com/in/amiola-demilade-5a46801a8/" target="_blank" rel="noopener noreferrer" className='flex gap-2 items-center'>
+                <FaLinkedin className="text-gray-700 hover:text-blue-700 dark:text-white" size={20} />
+                <p>Amiola Demilade</p>
               </a>
             </div>
             <div>
-              <a href="https://x.com/emmanuel_amiola" target="_blank" rel="noopener noreferrer">
-                <p className='flex gap-2'>
-                  <SiX className="text-gray-700 hover:text-blue-400 dark:text-white" size={20} />
-                  @emmanuel_amiola
-                </p>
+              <a href="https://x.com/emmanuel_amiola" target="_blank" rel="noopener noreferrer" className='flex gap-2 items-center'>
+                <SiX className="text-gray-700 hover:text-blue-400 dark:text-white" size={20} />
+                <p>@emmanuel_amiola</p>
               </a>
             </div>
             <div>
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex gap-2">
-            <FaWhatsapp className="text-gray-700 hover:text-blue-400 dark:text-white" size={20} />
-            <p>Let's Chat</p>
-        </a>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center">
+                <FaWhatsapp className="text-gray-700 hover:text-blue-400 dark:text-white" size={20} />
+                <p>Let's Chat</p>
+              </a>
             </div>
           </div>
         </div>
 
-        <div className='px-5 py-10 w-[60%] space-y-6'>
+        <div className='px-5 py-10 w-full md:w-2/3 space-y-6'>
           <div className='space-y-3'>
             <label>Name</label>
             <p className='border-2 px-4 flex-shrink rounded-lg'>
@@ -130,7 +133,6 @@ function Contact() {
           </div>
 
           {status && <p className="text-center">{status}</p>} 
-        
         </div>
       </form>
     </div>

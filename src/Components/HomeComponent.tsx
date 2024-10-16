@@ -8,6 +8,16 @@ import { motion } from 'framer-motion'
 import WhatsAppLink from '../utils/WhatsappLink';
 
 function HomeComponent() {
+
+  
+  const contactRef = React.useRef<HTMLDivElement | null>(null);
+
+  React.useEffect(() => {
+    // Scroll to the contact section when the component mounts
+    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
+
     const words = ['Frontend Developer', 'Mobile Developer', 'Backend Developer'];
     const duration = 3000;
 
@@ -39,9 +49,9 @@ function HomeComponent() {
 
   return (
 
-        <div className=' dark:bg-[#252025] dark:text-white h-[110vh]'>
+        <div className=' dark:bg-[#252025] dark:text-white h-[120vh] md:h-[110vh]' ref={contactRef}>
             
-            <section className='flex justify-center px-32  gap-10'>
+            <section className='flex justify-center px-5 lg:px-32   gap-10 flex-wrap md:flex-nowrap'>
                 <AnimatedSection animationType='left'>
             <motion.div      variants={animationVariants}
             initial="left"
@@ -54,7 +64,7 @@ function HomeComponent() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, ease: 'easeInOut' }}
-          className='self-center mt-10 w-[50%] h-[10vh] text-start space-y-6'
+          className='self-center mt-10 md:w-[75%] lg:w-[60%] h-[10vh] text-start space-y-6'
         >
           <div className=' text-4xl font-medium'>
             <WordCycler words={words} duration={duration} />

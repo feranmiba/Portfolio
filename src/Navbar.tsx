@@ -28,11 +28,11 @@ function Navbar() {
   }, []);
 
   return (
-    <section className={`w-full ${isFixed ? 'fixed top-0 left-0 z-50' : ''} ${darkMode ? 'bg-gray-700 text-white' : 'bg-white text-black'} shadow-2xl transition-all duration-300`}>
-      <div className='flex justify-between items-center px-6 md:px-24 py-3'>
+    <section className={`hidden md:block w-full ${isFixed ? 'fixed top-0 left-0 z-50' : ''} ${darkMode ? 'bg-gray-700 text-white' : 'bg-white text-black'} shadow-2xl transition-all duration-300`}>
+      <div className='flex justify-between items-center px-5 lg:px-24 py-3'>
         <div className='self-center flex gap-2'>
-        <p className='w-[5%] rounded-full'><img src={Spider} alt="" className='rounded-full' /></p>  
-          <h1 className='font-poppin font-semibold'> {"< Amiola_Dev />"}</h1>
+        <p className='w-[8%] lg:w-[5%] rounded-full'><img src={Spider} alt="" className='rounded-full' /></p>  
+          <h1 className='font-poppin font-semibold self-center'> {"< Amiola_Dev />"}</h1>
         </div>
 
         <div className='font-poppin flex justify-around gap-5'>

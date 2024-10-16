@@ -5,6 +5,15 @@ import { AnimatePresence, motion } from 'framer-motion'
 import WhatsAppLink from '../utils/WhatsappLink';
 
 function AboutMe() {
+
+    
+  const contactRef = React.useRef<HTMLDivElement | null>(null);
+
+  React.useEffect(() => {
+    // Scroll to the contact section when the component mounts
+    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
     const [openIndex, setOpenIndex] = React.useState<number | null>(null);
 
     const handleToggle = (index: number) => {
@@ -13,9 +22,9 @@ function AboutMe() {
 
 
   return (
-    <div className='dark:bg-[#252025] dark:text-white h-full'>
+    <div className='dark:bg-[#252025] dark:text-white h-full' ref={contactRef}>
 
-        <section className='text-start space-y-5 px-24 py-10'>
+        <section className='text-start space-y-5 px-5 md:px-10 lg:px-24 py-10'>
         <h1 className='font-bold text-xl'> About Me</h1>  
 
         <p className='leading-10'>I’m a passionate full-stack web developer with over a year of professional experience, dedicated to creating exceptional user experiences through clean, responsive, and visually appealing web applications. My journey has been fueled by a commitment to staying current with the latest technologies and best practices.
@@ -25,7 +34,7 @@ function AboutMe() {
 
         <h1 className='font-bold text-xl'>Technologies</h1> 
 
-        <div className='flex justify-between flex-wrap'>
+        <div className='flex  flex-wrap gap-5 md:gap-5'>
             {techIcons.map((tech) => (
                 <AnimatedSection animationType='slide'>
                 <p className=' px-5 py-3 rounded dark:bg-[#130e] shadow-xl'>
@@ -38,7 +47,7 @@ function AboutMe() {
         </div>
         </section>
 
-        <section className='text-start px-24 py-10'>
+        <section className='text-start px-5 md:px-10 lg:px-24 py-10'>
         <h1 className='font-bold'>Experience</h1> 
 
         <section className='space-y-7'>
