@@ -7,7 +7,7 @@ function Portfolio() {
   return (
     <div className='dark:bg-[#252025] dark:text-white'>
 
-      <section className='px-24 py-10 mt-10'>
+      <section className='px-24 mt-10'>
 
       <section className='flex justify-between gap-5'>
     {Portfolios.map((port, index) => (
