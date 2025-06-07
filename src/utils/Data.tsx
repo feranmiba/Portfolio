@@ -1,8 +1,11 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs } from 'react-icons/fa';
-import { SiTypescript, SiReact, SiReactrouter, SiFramer, SiPostgresql, SiMongodb, SiNextdotjs } from 'react-icons/si';
+import { SiTypescript, SiReact, SiReactrouter, SiFramer, SiPostgresql, SiMongodb, SiNextdotjs, SiAdonisjs } from 'react-icons/si';
 import Easy from '../Image/easyLearning.png'
 import Artica from '../Image/artica.png'
 import Fit from '../Image/getFit.png'
+import Music from '../Image/music.png'
+import Grantty from '../Image/grantty.png';
+import veeKite from '../Image/veekite.png';
 
 export const techIcons = [
   { name: 'HTML', icon: <FaHtml5 size={40} /> },
@@ -16,6 +19,7 @@ export const techIcons = [
   { name: 'Node.js', icon: <FaNodeJs size={40} /> },
   { name: 'PostgreSQL', icon: <SiPostgresql size={40} /> },
   { name: 'MongoDB', icon: <SiMongodb size={40} /> },
+  { name: 'AdoniJs', icon: <SiAdonisjs size={40} /> },
 ];
 
 
@@ -35,9 +39,26 @@ export const Experience = [
         ]
     },
     {
+        role: "Frontend Engineer",
+        company: "SphiderAssWeb",
+        time: "Feb 2025 - current",
+        responsibilities: [
+            "Developing and maintaining web applications using modern frameworks and technologies.",
+            "Collaborating with cross-functional teams to create user-friendly and efficient applications.",
+            "Integrating RESTful APIs for seamless communication between frontend and backend services.",
+            "Conducting code reviews, implementing testing strategies, and ensuring high-quality code standards.",
+            "Ensuring applications are responsive and perform well across a variety of devices and screen sizes.",
+            "Using version control systems (like Git) for tracking changes and collaborating on code.",
+            "Analyzing and improving application performance, addressing bottlenecks and enhancing user experience.",
+            "Continuously researching and implementing emerging technologies and best practices in web  development.",
+            "Identifying and fixing bugs, performance issues, and other technical challenges."
+        ]
+        
+    },
+    {
         role: "Fullstack Web & Mobile Developer",
         company: "Ullweb",
-        time: "June 2024 - current",
+        time: "June 2024 - June 2025",
         responsibilities: [
             "Developing and maintaining web and mobile applications using modern frameworks and technologies.",
             "Collaborating with cross-functional teams to create user-friendly and efficient applications.",
@@ -55,6 +76,24 @@ export const Experience = [
 ]
 
 export const Portfolios = [
+    {
+        image: Grantty,
+        name: "Grantty",
+        desc: "A platform designed to help small businesses discover and apply for grants, making funding more accessible to entrepreneurs and startups.",
+        link: "https://grantty.com/"
+    },    
+    {
+        image: Music,
+        name: "Musician Portfolio",
+        desc: "A responsive portfolio website for showcasing music, albums, and artist profiles. Built with modern web technologies and optimized for performance.",
+        link: "https://youngboyjarred.netlify.app/"
+    },    
+    {
+        image: veeKite,
+        name: "Veekite",
+        desc: "A modern website built for Veekite, an engineering company based in Nigeria, showcasing their services, projects, and expertise in delivering innovative engineering solutions.",
+        link: "https://www.veekites.com/"
+    },    
     {
         image: Easy,
         name: "Easy learning",

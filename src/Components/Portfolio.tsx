@@ -18,9 +18,9 @@ function Portfolio() {
 
       <section className='px-5 md:px-10 lg:px-24 mt-10 mb-2'>
 
-      <section className='flex justify-between gap-5 flex-wrap md:flex-nowrap'>
+      <section className='flex justify-between gap-5 flex-wrap'>
     {Portfolios.map((port, index) => (
-        <div className='relative md:w-[33%] shadow-2xl  dark:bg-[#1b1b1bee] rounded-lg cursor-pointer' key={index}>
+        <div className='relative md:w-[30%] shadow-2xl  dark:bg-[#1b1b1bee] rounded-lg cursor-pointer' key={index}>
             <img src={port.image} alt="" className='rounded-t-lg' />
             {/* Dark Overlay */}
             <div className='absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-lg'>
