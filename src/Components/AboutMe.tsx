@@ -27,7 +27,7 @@ function AboutMe() {
         <section className='text-start space-y-5 px-5 md:px-10 lg:px-24 py-10'>
         <h1 className='font-bold text-xl'> About Me</h1>  
 
-        <p className='leading-10'>I’m a passionate full-stack web developer with over a year of professional experience, dedicated to creating exceptional user experiences through clean, responsive, and visually appealing web applications. My journey has been fueled by a commitment to staying current with the latest technologies and best practices.
+        <p className='leading-10'>I’m a passionate full-stack web developer with over two years of professional experience, dedicated to creating exceptional user experiences through clean, responsive, and visually appealing web applications. My journey has been fueled by a commitment to staying current with the latest technologies and best practices.
 
         With hands-on experience in Web3 frontend technologies, I also specialize in building and integrating Web3 smart contracts. Currently, I work as a Full Stack/Mobile Developer at Ullweb, where I develop robust backends and scalable frontends. Previously, I completed an internship at Web3Bridge, further honing my skills in the evolving tech landscape.
         </p>
