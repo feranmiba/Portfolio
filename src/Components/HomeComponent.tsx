@@ -56,7 +56,7 @@ function HomeComponent() {
             <motion.div      variants={animationVariants}
             initial="left"
             animate={['left', 'right']} >
-            <img src={Profile} className='object-contain ' />  
+            <img src={Profile} className='object-contain ' alt="profile" />  
             </motion.div>
             </AnimatedSection>
 
